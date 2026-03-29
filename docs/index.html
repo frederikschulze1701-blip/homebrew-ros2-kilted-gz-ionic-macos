@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROS 2 Kilted + Gazebo Ionic for macOS</title>
+  <meta name="description" content="Install ROS 2 Kilted with Gazebo Ionic on macOS Apple Silicon via Homebrew. Pre-compiled, ready to use.">
+  <meta name="keywords" content="ROS 2, ROS2, Kilted, Gazebo Ionic, macOS, Apple Silicon, Homebrew, robotics, arm64">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --code-bg: #1c2128;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { text-align: center; padding: 3rem 0 2rem; }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    h1 span { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
+    .badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .badge {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .badge.highlight { border-color: var(--green); color: var(--green); }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent); }
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.4rem;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace; }
+    p { margin-bottom: 0.8rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 0.8rem; }
+    li { margin-bottom: 0.4rem; }
+    .step { color: var(--green); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; color: var(--muted); padding: 2rem 0; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ROS 2 Kilted + <span>Gazebo Ionic</span></h1>
+      <p class="subtitle">Pre-compiled Homebrew tap for macOS Apple Silicon</p>
+      <div class="badges">
+        <span class="badge highlight">Apple Silicon</span>
+        <span class="badge">macOS</span>
+        <span class="badge">ROS 2 Kilted</span>
+        <span class="badge">Gazebo Ionic</span>
+        <span class="badge">arm64</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Quick Install</h2>
+      <p>Two commands and you're ready to go:</p>
+      <pre><code><span class="step"># 1.</span> Add the tap
+brew tap frederikschulze1701-blip/ros2-kilted-gz-ionic-macos
+
+<span class="step"># 2.</span> Install ROS 2 + Gazebo
+brew install ros2-kilted-gazebo-ionic</code></pre>
+    </section>
+
+    <section>
+      <h2>Setup</h2>
+      <p>Source the setup script in your terminal:</p>
+      <pre><code>source $(brew --prefix)/opt/ros2-kilted-gazebo-ionic/setup.zsh</code></pre>
+      <p>To load it automatically, add it to your shell profile:</p>
+      <pre><code>echo 'source $(brew --prefix)/opt/ros2-kilted-gazebo-ionic/setup.zsh' >> ~/.zshrc</code></pre>
+    </section>
+
+    <section>
+      <h2>What's Included</h2>
+      <ul>
+        <li><strong>ROS 2 Kilted</strong> &mdash; the latest ROS 2 release</li>
+        <li><strong>Gazebo Ionic</strong> &mdash; next-gen robotics simulator</li>
+        <li>Pre-compiled for <strong>macOS Apple Silicon (arm64)</strong></li>
+        <li>No source build required &mdash; install in minutes, not hours</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why This Tap?</h2>
+      <p>Building ROS 2 from source on macOS can take hours and often fails due to dependency issues. This tap provides a <strong>pre-compiled distribution</strong> that installs cleanly via Homebrew &mdash; the way macOS packages should work.</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://github.com/frederikschulze1701-blip/homebrew-ros2-kilted-gz-ionic-macos">GitHub Repository</a></li>
+        <li><a href="https://docs.ros.org/en/kilted/">ROS 2 Kilted Documentation</a></li>
+        <li><a href="https://gazebosim.org/">Gazebo Simulator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Made for the ROS &amp; macOS community</p>
+    </footer>
+  </div>
+</body>
+</html>
